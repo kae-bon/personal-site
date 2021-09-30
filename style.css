@@ -1,0 +1,123 @@
+/* First CSS experience */
+
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* CSS Styling - Entire Body (all main content on screen) */
+body {
+    background-color: #305a63;
+    font-family: 'Montserrat';
+    color: #151b1d;
+    margin: 0;
+    padding: 0;
+    background-image: url("grid.png");
+    background-size: 150px;
+    background-position: top left;
+}
+
+/* Container class, currently holds header, links, & title */
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #45818e;
+    height: 120px;
+    margin-bottom: 0;
+    border-bottom-style: solid;
+    border-bottom-color: #151b1d;
+    border-bottom-width: 2px;
+}
+
+/* Header 1 in Header Bar - "Kae Bonaguro" */
+h1 {
+    float: left;
+    margin-left: 20px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5em;
+    color: #151b1d;
+}
+
+/* Entire Nav Class - includes nav list & links */
+.nav {
+    font-size: 1.5em;
+}
+
+/* Nav List (all links) */
+ul {
+    list-style-type: none;
+    float: right;
+    margin: 10px;
+    padding: 10px;
+    margin-left: 10px;
+    margin-top: 60px;
+}
+
+li {
+    display: inline;
+    margin-right: 10px;
+}
+
+/* Nav List - actual link buttons */
+a {
+    font-size: .75em;
+    text-decoration: none;
+    background-color: #fffbef;
+    padding: 10px;
+    border: 1px solid #151b1d;
+    font-weight: bold;
+    text-align: center;
+}
+
+a:link {
+    color: #151b1d;
+}
+
+a:visited {
+    color: #45818e;
+}
+
+/*#233134*/
+a:hover {
+    background-color: #ffdd7b;
+    color: #233134;
+    padding: 10px;
+}
+
+/* Main Content that is NOT Header */
+main {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    background-color: #fffbef;
+    margin: 20px 20px 20px 20px;
+    border: 1px solid #151b1d;
+    opacity: .75;
+    height: 300px;
+    overflow-y: auto;
+}
+
+section:hover {
+    opacity: 1;
+}
+
+h2 {
+    margin: 20px;
+    text-align: center;
+    color: #151b1d;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.75em;
+}
+
+p {
+    margin: 20px;
+    color: #151b1d;
+    text-align: justify;
+}

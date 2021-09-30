@@ -100,8 +100,6 @@ section {
     margin: 20px 20px 20px 20px;
     border: 1px solid #151b1d;
     opacity: .75;
-    height: 300px;
-    overflow-y: auto;
 }
 
 section:hover {

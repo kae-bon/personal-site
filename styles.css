@@ -1,0 +1,196 @@
+body {
+    margin: 1rem 2rem;
+    background-color: #fcfcfc;
+    font-family: "Quicksand", sans-serif;
+    color: #35393c;
+    line-height: 2rem;
+}
+
+nav>ol {
+    margin: 1rem 0 0 0;
+    padding: 0;
+
+}
+
+nav>ol>li {
+    margin-bottom: 1rem;
+}
+
+li {
+    list-style: none;
+}
+
+nav a {
+    width: 10rem;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #2ab7ca;
+    padding: .5rem 1rem;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: background-color 500ms;
+}
+
+nav a:hover {
+    background-color: #186d79;
+    transition: background-color 300ms;
+}
+
+section#social a,
+section#social i {
+    color: #2ab7ca;
+    font-size: 3rem;
+}
+
+#homepage {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+        "intro"
+        "skills"
+        "links"
+        "footer";
+    row-gap: 1.5rem;
+    justify-items: center;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main#intro,
+#skills,
+#social,
+footer {
+    border-radius: 3px;
+    box-shadow: rgba(34, 147, 161, 0.2) 0px 2px 8px 0px;
+    width: 95%;
+}
+
+#skills {
+    grid-area: skills;
+}
+
+#skills>#skill-content>div>ul {
+    padding: 0;
+}
+
+main#intro {
+    grid-area: intro;
+    text-align: justify;
+}
+
+/* main#intro>div,
+section#skills>div {
+    padding: 1rem;
+} */
+
+.container {
+    padding: 1rem;
+}
+
+section#social h2 {
+    padding-left: 1rem;
+    margin-bottom: 0;
+}
+
+#social {
+    grid-area: links;
+}
+
+section#social>div.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+body#homepage h1 {
+    font-family: "Lobster", serif;
+    color: #ff785a;
+    text-align: center;
+}
+
+i.fa-toolbox {
+    display: none;
+}
+
+div#about-me>p {
+    line-height: 2rem;
+}
+
+.text-dec {
+    background: linear-gradient(to top, #f8d53a 50%, transparent 50%);
+    font-weight: bold;
+    width: fit-content;
+}
+
+section#skills #skill-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+section#skills h2 {
+    display: inline-block;
+    width: 100%;
+}
+
+ul>li.skill {
+    margin: 0;
+}
+
+div.container a i {
+    padding: 1rem;
+}
+
+@media screen and (min-width: 900px) {
+    header {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    nav>ol>li {
+        display: inline-block;
+        margin-left: 2rem;
+    }
+
+    main#intro,
+    #skills,
+    #social,
+    footer {
+        width: 60%;
+    }
+
+    .container {
+        padding: 2.5rem;
+    }
+
+    section#skills #skill-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+
+    i.fa-toolbox {
+        color: #2ab7ca;
+        font-size: 5rem;
+        align-self: center;
+        display: inline-block;
+    }
+
+}

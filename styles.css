@@ -58,6 +58,7 @@ section#social i {
     min-height: 100vh;
 }
 
+
 header {
     grid-area: header;
     display: flex;
@@ -69,7 +70,8 @@ header {
 main#intro,
 #skills,
 #social,
-footer {
+footer,
+#education {
     border-radius: 3px;
     box-shadow: rgba(34, 147, 161, 0.2) 0px 2px 8px 0px;
     width: 95%;
@@ -98,8 +100,8 @@ section#skills>div {
 }
 
 section#social h2 {
-    padding-left: 1rem;
-    margin-bottom: 0;
+    flex-basis: 100%;
+    flex-grow: 1;
 }
 
 #social {
@@ -109,6 +111,7 @@ section#social h2 {
 section#social>div.container {
     display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -116,7 +119,7 @@ footer {
     text-align: center;
 }
 
-body#homepage h1 {
+body h1 {
     font-family: "Lobster", serif;
     color: #ff785a;
     text-align: center;
@@ -191,6 +194,32 @@ div.container a i {
         font-size: 5rem;
         align-self: center;
         display: inline-block;
+    }
+
+    #social div.container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    section#social h2 {
+        flex-basis: 100%;
+        flex-grow: 1;
+    }
+
+    h2 {
+        padding: 0;
+    }
+
+    section#social a,
+    section#social i {
+        font-size: 3.5rem;
+        transition: color 300ms;
+    }
+
+    section#social a i:hover {
+        color: #186d79;
+        transition: color 300ms;
     }
 
 }

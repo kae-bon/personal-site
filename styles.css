@@ -222,4 +222,13 @@ div.container a i {
         transition: color 300ms;
     }
 
+    p,
+    li.skill {
+        font-size: 1.2rem;
+    }
+
+    i.fa-star {
+        color: #ff785a;
+    }
+
 }

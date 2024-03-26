@@ -58,6 +58,22 @@ section#social i {
     min-height: 100vh;
 }
 
+#about-me-page {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "header"
+        "summary"
+        "resume"
+        "education"
+        "experience"
+        "volunteer"
+        "footer"
+    ;
+    row-gap: 1.5rem;
+    justify-items: center;
+    min-height: 100vh;
+}
+
 
 header {
     grid-area: header;
@@ -71,7 +87,11 @@ main#intro,
 #skills,
 #social,
 footer,
-#education {
+#education,
+#experience,
+#volunteer-experience,
+#summary,
+#resume {
     border-radius: 3px;
     box-shadow: rgba(34, 147, 161, 0.2) 0px 2px 8px 0px;
     width: 95%;
@@ -89,11 +109,6 @@ main#intro {
     grid-area: intro;
     text-align: justify;
 }
-
-/* main#intro>div,
-section#skills>div {
-    padding: 1rem;
-} */
 
 .container {
     padding: 1rem;
@@ -121,7 +136,6 @@ footer {
 
 body h1 {
     font-family: "Lobster", serif;
-    color: #ff785a;
     text-align: center;
 }
 
@@ -158,6 +172,66 @@ div.container a i {
     padding: 1rem;
 }
 
+#summary {
+    grid-area: summary;
+}
+
+#education {
+    grid-area: education;
+}
+
+#experience {
+    grid-area: experience;
+}
+
+#resume {
+    grid-area: resume;
+}
+
+#volunteer-experience {
+    grid-area: volunteer;
+}
+
+h3.resume-title,
+p.dates {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+p.dates {
+    font-style: italic;
+}
+
+i.fa-star {
+    color: #ff785a;
+}
+
+i.fa-file-pdf {
+    color: #2ab7ca;
+    align-self: center;
+    font-size: 4rem;
+    display: inline-block;
+    transition: color 300ms;
+}
+
+.split {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: 1.5rem 0;
+}
+
+.split>i {
+    color: #2ab7ca;
+    font-size: .75rem;
+}
+
+#im-kae {
+    text-decoration: none;
+    color: #ff785a;
+    transition: color 300ms;
+}
+
 @media screen and (min-width: 900px) {
     header {
         flex-direction: row;
@@ -175,7 +249,12 @@ div.container a i {
     main#intro,
     #skills,
     #social,
-    footer {
+    footer,
+    #experience,
+    #education,
+    #volunteer-experience,
+    #summary,
+    #resume {
         width: 60%;
     }
 
@@ -217,7 +296,8 @@ div.container a i {
         transition: color 300ms;
     }
 
-    section#social a i:hover {
+    section#social a i:hover,
+    i.fa-file-pdf:hover {
         color: #186d79;
         transition: color 300ms;
     }
@@ -227,8 +307,9 @@ div.container a i {
         font-size: 1.2rem;
     }
 
-    i.fa-star {
-        color: #ff785a;
+    #im-kae:hover {
+        color: #2ab7ca;
+        transition: color 300ms;
     }
 
 }

@@ -194,7 +194,6 @@ footer p {
     margin: -.25rem;
 }
 
-
 @media screen and (min-width: 480px) {
 
     /*general styles*/
@@ -225,13 +224,18 @@ footer p {
 
     /*about-me styles*/
     a i {
-        font-size: 3rem;
+        font-size: 2rem;
         padding: 1.5rem;
     }
 
     a i:hover {
         background-color: #186d79;
         transition: background-color 300ms;
+    }
+
+    #socials {
+        justify-content: center;
+        gap: 10rem;
     }
 
     /*skills styles*/
@@ -273,9 +277,8 @@ footer p {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
         padding: 1.25rem;
-        /* flex: 0 0 40%; */
         min-width: 200px;
         max-width: 300px;
         align-self: stretch;

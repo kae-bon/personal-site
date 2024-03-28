@@ -98,6 +98,7 @@ a i {
 
 #skills>#skill-content>div>ul {
     padding: 0;
+    margin: 0;
 }
 
 i.fa-toolbox {
@@ -112,6 +113,7 @@ section#skills #skill-list {
 
 ul>li.skill {
     margin: 0;
+    font-size: .8rem;
 }
 
 /*projects styles*/
@@ -161,7 +163,6 @@ article.project-card>p {
     margin: .5rem 0;
 }
 
-
 /*education styles*/
 #education {
     grid-area: education;
@@ -174,6 +175,10 @@ p.dates {
 }
 
 .resume-title {
+    margin-bottom: 0;
+}
+
+p:last-child {
     margin-bottom: 0;
 }
 
@@ -246,14 +251,13 @@ footer p {
 
     p,
     li.skill {
-        font-size: 1.2rem;
+        font-size: 1.2 rem;
     }
 
     /*projects styles*/
     #project-cards {
         flex-direction: row;
-        justify-content: center;
-        align-items: stretch;
+        justify-content: space-evenly;
         flex-wrap: wrap;
         margin: 0;
         padding: 0;
@@ -269,11 +273,12 @@ footer p {
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 2rem;
-        flex-basis: 40%;
-        flex-shrink: 0;
-        /* align-self: stretch; */
+        justify-content: space-evenly;
+        padding: 1.25rem;
+        /* flex: 0 0 40%; */
+        min-width: 200px;
+        max-width: 300px;
+        align-self: stretch;
     }
 
     .project-title {

@@ -255,7 +255,7 @@ footer p {
     }
 
     p,
-    li.skill {
+    ul>li.skill {
         font-size: 1.2rem;
     }
 

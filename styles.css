@@ -234,8 +234,9 @@ footer p {
     }
 
     #socials {
+        flex-wrap: wrap;
         justify-content: center;
-        gap: 10rem;
+        gap: 5%;
     }
 
     /*skills styles*/

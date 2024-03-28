@@ -1,48 +1,10 @@
 body {
-    margin: 1rem 2rem;
+    margin: 0;
     background-color: #fcfcfc;
     font-family: "Quicksand", sans-serif;
     color: #35393c;
     line-height: 2rem;
-}
-
-nav>ol {
-    margin: 1rem 0 0 0;
-    padding: 0;
-
-}
-
-nav>ol>li {
-    margin-bottom: 1rem;
-}
-
-li {
-    list-style: none;
-}
-
-nav a {
-    width: 10rem;
-    text-decoration: none;
-    color: #ffffff;
-    font-weight: bold;
-    background-color: #2ab7ca;
-    padding: .5rem 1rem;
-    border-radius: 3px;
-    display: inline-block;
-    text-align: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    transition: background-color 500ms;
-}
-
-nav a:hover {
-    background-color: #186d79;
-    transition: background-color 300ms;
-}
-
-section#social a,
-section#social i {
-    color: #2ab7ca;
-    font-size: 3rem;
+    max-width: 100%;
 }
 
 #homepage {
@@ -51,52 +13,85 @@ section#social i {
     grid-template-areas: "header"
         "intro"
         "skills"
-        "links"
+        "projects"
+        "education"
         "footer";
     row-gap: 1.5rem;
     justify-items: center;
-    min-height: 100vh;
 }
 
-#about-me-page {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: "header"
-        "summary"
-        "resume"
-        "education"
-        "experience"
-        "volunteer"
-        "footer"
-    ;
-    row-gap: 1.5rem;
-    justify-items: center;
-    min-height: 100vh;
+main#intro p {
+    margin-top: .5rem;
 }
 
-
-header {
-    grid-area: header;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/*general styles*/
+.text-dec {
+    background: linear-gradient(to top, #f8d53a 50%, transparent 50%);
+    font-weight: bold;
+    width: fit-content;
 }
 
 main#intro,
 #skills,
-#social,
 footer,
 #education,
-#experience,
-#volunteer-experience,
-#summary,
-#resume {
+#resume,
+section#projects {
     border-radius: 3px;
+    box-sizing: border-box;
     box-shadow: rgba(34, 147, 161, 0.2) 0px 2px 8px 0px;
     width: 95%;
+    padding: 1rem;
 }
 
+h2 {
+    margin: 0 0 1rem 0;
+}
+
+li {
+    list-style: none;
+}
+
+i.fa-star {
+    color: #ff785a;
+}
+
+/*header styles*/
+header {
+    grid-area: header;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+body h1 {
+    font-family: "Lobster", serif;
+    color: #ff785a;
+    margin-bottom: 1rem;
+}
+
+/*about me styles*/
+main#intro {
+    grid-area: intro;
+    text-align: justify;
+}
+
+a i {
+    margin: .5rem 0 0 0;
+    font-size: 1.75rem;
+    color: #ffffff;
+    background-color: #2ab7ca;
+    padding: 1rem;
+    border-radius: 3px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    transition: background-color 500ms;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/*skills styles*/
 #skills {
     grid-area: skills;
 }
@@ -105,52 +100,8 @@ footer,
     padding: 0;
 }
 
-main#intro {
-    grid-area: intro;
-    text-align: justify;
-}
-
-.container {
-    padding: 1rem;
-}
-
-section#social h2 {
-    flex-basis: 100%;
-    flex-grow: 1;
-}
-
-#social {
-    grid-area: links;
-}
-
-section#social>div.container {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-
-footer {
-    grid-area: footer;
-    text-align: center;
-}
-
-body h1 {
-    font-family: "Lobster", serif;
-    text-align: center;
-}
-
 i.fa-toolbox {
     display: none;
-}
-
-div#about-me>p {
-    line-height: 2rem;
-}
-
-.text-dec {
-    background: linear-gradient(to top, #f8d53a 50%, transparent 50%);
-    font-weight: bold;
-    width: fit-content;
 }
 
 section#skills #skill-list {
@@ -159,109 +110,126 @@ section#skills #skill-list {
     align-items: flex-start;
 }
 
-section#skills h2 {
-    display: inline-block;
-    width: 100%;
-}
-
 ul>li.skill {
     margin: 0;
 }
 
-div.container a i {
-    padding: 1rem;
+/*projects styles*/
+section#projects {
+    grid-area: projects;
 }
 
-#summary {
-    grid-area: summary;
+#project-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0 0 0;
+    padding: 0;
 }
 
+h3 {
+    margin: 0;
+}
+
+.project-card {
+    border-radius: 5px;
+    box-sizing: border-box;
+    box-shadow: rgba(189, 170, 0, 0.3) 0px 2px 8px 0px;
+    width: 90%;
+    padding: 1rem 1rem;
+}
+
+.project-list>h2 {
+    padding-left: 1rem;
+}
+
+.github-link {
+    background-color: #f8d53a;
+    font-weight: bold;
+    text-decoration: none;
+    padding: .5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 300ms;
+    color: #35393c;
+}
+
+article.project-card>p {
+    font-size: .8rem;
+    font-style: italic;
+    margin: .5rem 0;
+}
+
+
+/*education styles*/
 #education {
     grid-area: education;
 }
 
-#experience {
-    grid-area: experience;
-}
-
-#resume {
-    grid-area: resume;
-}
-
-#volunteer-experience {
-    grid-area: volunteer;
-}
-
-h3.resume-title,
-p.dates {
-    margin-bottom: 0;
-    margin-top: 0;
-}
-
 p.dates {
     font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-i.fa-star {
-    color: #ff785a;
+.resume-title {
+    margin-bottom: 0;
 }
 
-i.fa-file-pdf {
-    color: #2ab7ca;
-    align-self: center;
-    font-size: 4rem;
-    display: inline-block;
-    transition: color 300ms;
+/*footer styles*/
+
+footer {
+    grid-area: footer;
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
-.split {
-    display: flex;
-    justify-content: center;
-    gap: 5rem;
-    margin: 1.5rem 0;
+footer p {
+    margin: -.25rem;
 }
 
-.split>i {
-    color: #2ab7ca;
-    font-size: .75rem;
-}
 
-#im-kae {
-    text-decoration: none;
-    color: #ff785a;
-    transition: color 300ms;
-}
+@media screen and (min-width: 480px) {
 
-@media screen and (min-width: 900px) {
-    header {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        margin-bottom: 3rem;
-    }
-
-    nav>ol>li {
-        display: inline-block;
-        margin-left: 2rem;
+    /*general styles*/
+    main#intro,
+    #skills,
+    footer,
+    #education,
+    section#projects {
+        width: 70%;
     }
 
     main#intro,
     #skills,
-    #social,
-    footer,
-    #experience,
     #education,
-    #volunteer-experience,
-    #summary,
-    #resume {
-        width: 60%;
+    section#projects {
+        padding: 2rem;
     }
 
-    .container {
-        padding: 2.5rem;
+    h2 {
+        padding: 0;
     }
 
+    /*header styles*/
+    header h1 {
+        margin: 5rem 0 3rem;
+        font-size: 3rem;
+    }
+
+    /*about-me styles*/
+    a i {
+        font-size: 3rem;
+        padding: 1.5rem;
+    }
+
+    a i:hover {
+        background-color: #186d79;
+        transition: background-color 300ms;
+    }
+
+    /*skills styles*/
     section#skills #skill-list {
         display: flex;
         justify-content: space-around;
@@ -269,37 +237,11 @@ i.fa-file-pdf {
     }
 
     i.fa-toolbox {
+        flex-shrink: 1;
         color: #2ab7ca;
         font-size: 5rem;
         align-self: center;
         display: inline-block;
-    }
-
-    #social div.container {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    section#social h2 {
-        flex-basis: 100%;
-        flex-grow: 1;
-    }
-
-    h2 {
-        padding: 0;
-    }
-
-    section#social a,
-    section#social i {
-        font-size: 3.5rem;
-        transition: color 300ms;
-    }
-
-    section#social a i:hover,
-    i.fa-file-pdf:hover {
-        color: #186d79;
-        transition: color 300ms;
     }
 
     p,
@@ -307,9 +249,57 @@ i.fa-file-pdf {
         font-size: 1.2rem;
     }
 
-    #im-kae:hover {
-        color: #2ab7ca;
-        transition: color 300ms;
+    /*projects styles*/
+    #project-cards {
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin: 0;
+        padding: 0;
+    }
+
+    div.project-list>h2 {
+        flex-grow: 1;
+        flex-basis: 100%;
+        padding-left: 0;
+    }
+
+    article.project-card {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 2rem;
+        flex-basis: 40%;
+        flex-shrink: 0;
+        /* align-self: stretch; */
+    }
+
+    .project-title {
+        margin: 0 0 .5rem 0;
+        font-size: 1rem;
+    }
+
+    .github-link {
+        align-self: center;
+        height: fit-content;
+        width: fit-content;
+        padding: .25rem 2rem;
+    }
+
+    .github-link:hover {
+        background-color: #ff785a;
+        transition: background-color 300ms;
+    }
+
+    div#project-skills>.skill {
+        font-size: .8rem;
+    }
+
+    div#project-skills h4 {
+        flex-grow: 1;
+        flex-basis: 100%;
     }
 
 }

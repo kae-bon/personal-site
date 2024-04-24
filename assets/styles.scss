@@ -1,10 +1,6 @@
-// Custom.scss
-// Option B: Include parts of Bootstrap
-
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
 @import "../node_modules/bootstrap/scss/functions";
 
-// 2. Include any default variable overrides here
+// Default variable overrides
 $primary: #2ab7ca;
 $secondary: #ff785a;
 $success: #f8d53a;
@@ -12,18 +8,12 @@ $light: #fcfcfc;
 $dark: #35393c;
 $font-family-base: "Quicksand", sans-serif;
 
-// 3. Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
 @import "../node_modules/bootstrap/scss/variables";
 @import "../node_modules/bootstrap/scss/variables-dark";
-
-// 4. Include any default map overrides here
-
-// 5. Include remainder of required parts
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "../node_modules/bootstrap/scss/root";
 
-// 6. Optionally include any other parts as needed
 @import "../node_modules/bootstrap/scss/utilities";
 @import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/type";
@@ -35,14 +25,10 @@ $font-family-base: "Quicksand", sans-serif;
 @import "../node_modules/bootstrap/scss/card";
 @import "../node_modules/bootstrap/scss/badge";
 @import "../node_modules/bootstrap/scss/list-group";
-
-// 7. Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 @import "../node_modules/bootstrap/scss/utilities/api";
 
-// 8. Add additional custom code here
-
-// Basic Styles
-// Typography
+// basic styles
+// typography
 body h1 {
     font-family: "Lobster", serif;
     color: #ff785a;
@@ -69,8 +55,12 @@ li {
     width: fit-content;
 }
 
-// Icons
-li.list-group-item i {
+footer.card-footer p {
+    font-size: 1rem;
+}
+
+// icons
+i.fa-solid.fa-star {
     color: $secondary;
     font-size: .8rem;
 }
@@ -89,39 +79,63 @@ i {
     color: $primary;
 }
 
-// Display
-.container {
-    border-radius: 3px;
-    box-sizing: border-box;
-    width: 95%;
-    padding: 1rem;
-}
-
-.list-group-horizontal > .list-group-item {
-    border: none;
-}
-
 @media screen and (min-width: 480px) {
-    /*general styles*/
-    
-    
-    /*header styles*/
-    header h1 {
-        
-        font-size: 3rem;
+    // body layout
+    body {
+        text-align: justify;
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     
+    // header typography
+    header h1 {
+        font-size: 3rem;
+    }
 
-    /*intro*/
+    // skill list items
+    li {
+        font-size: 1rem;
     
-   
+    }
 
-    // *skills styles*/
+    // project cards
+    .card {
+        flex-basis: 50%;
+    }
+
+    .card-text {
+        font-size: .9rem;
+    }
+
+    .card-title {
+        text-align: start;
+    }
+}
+
+@media screen and (min-width: 950px) {
+    // whole body container width
+    #container {
+        width: 75%;
+    }
     
+    // skill list items
+    li { 
+        width: 30%;
+    }
 
-    /*projects styles*/
-    
+    // project card sizing
+    .card {
+        flex-basis: 45%;
+    }
+}
 
+@media screen and (min-width: 1175px) {
+   // skill list items
+    li { 
+        width: 25%;
+    }
 }
 

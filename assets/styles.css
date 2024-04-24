@@ -7917,7 +7917,11 @@ li {
   width: fit-content;
 }
 
-li.list-group-item i {
+footer.card-footer p {
+  font-size: 1rem;
+}
+
+i.fa-solid.fa-star {
   color: #ff785a;
   font-size: 0.8rem;
 }
@@ -7936,25 +7940,45 @@ i {
   color: #2ab7ca;
 }
 
-.container {
-  border-radius: 3px;
-  box-sizing: border-box;
-  width: 95%;
-  padding: 1rem;
-}
-
-.list-group-horizontal > .list-group-item {
-  border: none;
-}
-
 @media screen and (min-width: 480px) {
-  /*general styles*/
-  /*header styles*/
+  body {
+    text-align: justify;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   header h1, header .h1 {
     font-size: 3rem;
   }
-  /*intro*/
-  /*projects styles*/
+  li {
+    font-size: 1rem;
+  }
+  .card {
+    flex-basis: 50%;
+  }
+  .card-text {
+    font-size: 0.9rem;
+  }
+  .card-title {
+    text-align: start;
+  }
+}
+@media screen and (min-width: 950px) {
+  #container {
+    width: 75%;
+  }
+  li {
+    width: 30%;
+  }
+  .card {
+    flex-basis: 45%;
+  }
+}
+@media screen and (min-width: 1175px) {
+  li {
+    width: 25%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

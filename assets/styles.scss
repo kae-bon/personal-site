@@ -82,7 +82,7 @@ a i {
 
 i {
     color: $primary;
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 .break {
@@ -103,13 +103,7 @@ i {
 
 @media screen and (min-width: 480px) {
     /*general styles*/
-    main#intro,
-    #skills,
-    footer,
-    #education,
-    section#projects {
-        width: 70%;
-    }
+    
     
     /*header styles*/
     header h1 {
